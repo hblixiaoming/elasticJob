@@ -1,0 +1,27 @@
+server:
+  context-path: /elasticJob
+  tomcat:
+    accesslog:
+      directory: /mnt/logs/elasticJob
+      enabled: true
+      pattern: remote_addr=[%a] http_x_forward=[%{X-Forwarded-For}i] time=%t request=[%r] status=[%s] byte=[%b] elapsed=[%T] refer=[%{Referer}i] ua=[%{User-Agent}i] cookie=[] ariRequestId=[%{ariRequestId}r] requestId=[%{requestId}r]
+      prefix: access_log
+      suffix: .log
+spring:
+  application:
+    name: elasticJob
+    index: "index.html"
+  chain:
+    strategy:
+      content:
+        enabled: true
+        paths: /**
+  profiles:
+    active: testing
+
+logging:
+  config: classpath:log4j2.yml
+
+mybatis:
+  typeAliasesPackage: com.lxm.elasticjob.model
+  mapperLocations: classpath:mapper/*.xml

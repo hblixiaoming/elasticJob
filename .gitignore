@@ -1,0 +1,12 @@
+/target
+/.classpath
+/.project
+/.settings/*
+*.swp
+/bin
+/WebContent
+/logs
+/.idea
+/finance.iml
+.DS_Store
+elasticJob.iml
