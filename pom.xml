@@ -19,7 +19,7 @@
         <slf4j.version>1.7.21</slf4j.version>
         <log4j.version>2.6.1</log4j.version>
         <aspectj.version>1.8.14</aspectj.version>
-        <dubbo.version>2.5.0</dubbo.version>
+        <dubbo.version>2.6.12</dubbo.version>
         <zookeeper.version>3.4.5</zookeeper.version>
     </properties>
     <dependencies>
